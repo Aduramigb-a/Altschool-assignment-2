@@ -1,0 +1,312 @@
+/* Css reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  /** 150% of font-size **/
+  -webkit-font-smoothing: antialiased;
+}
+
+/* replaced element */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Main Css */
+
+@font-face {
+  font-family: 'SofiaProLight';
+  src: url('./Fonts/SofiaProLight.ttf')
+      format('truetype'),
+    url('./Fonts/SofiaProLight.woff2')
+      format('woff2');
+  font-weight: 300;
+
+}
+
+@font-face {
+  font-family: 'SofiaProMedium';
+  src: url('./Fonts/SofiaProMedium.ttf')
+    format('truetype'),
+  url('./Fonts/SofiaProMedium.woff2')
+    format('woff2');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'SofiaProSemiBold';
+  src: url('./Fonts/SofiaProSemiBold.ttf')
+    format('truetype'),
+  url('./Fonts/SofiaProSemiBold.woff2')
+    format('woff2');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'BrownRegular';
+  src: url('./Fonts/Brown_font/Brown\ Regular\ Regular.ttf') format('truetype'),
+    url('./Fonts/Brown_font/Brown\ Regular\ Regular.woff2') format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'BrownBold';
+  src: url('./Fonts/Brown_font/Brown\ Bold.ttf') format('truetype'),
+    url('./Fonts/Brown_font/Brown\ Bold.woff2') format('woff2');
+  font-weight: 700;
+}
+
+
+
+
+
+
+body {
+  background-color: hsla(174, 62%, 47%, .1);
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+h2 {
+  font-family: 'BrownBold', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: hsla(174, 100%, 2%, 1);
+}
+
+.header p {
+  /* font-family: 'Afacad', sans-serif; */
+    font-family: 'BrownRegular', sans-serif;
+  font-size: 1rem;
+  max-width: 460px;
+  margin-block-start: 20px;
+  color: hsla(0, 0%, 45%, 1);
+
+}
+
+.header h2, .header p {
+  margin-inline-start: 20px;
+}
+
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 80px auto;
+  width: 80%;
+}
+
+.sign-up {
+  max-width: 580px;
+  background-color: hsla(0, 0%, 100%, 1);
+  border: 1px solid hsla(0, 0%, 100%, 1);
+  border-radius: 6px;
+  padding: 40px;
+  box-shadow: 0px 4px 50px 0px rgba(4, 8, 19, 0.10);
+}
+
+
+
+
+.labels {
+  display: flex;
+  flex-direction: column;
+
+
+  > input, select {
+    /* The problem concerning the mobile view */
+    width: 238px;
+    height: 48px;
+    padding-block: 14px;
+    padding-inline: 16px;
+
+    outline: none;
+
+    &:focus {
+      border: 2px solid hsla(174, 62%, 47%, 1);
+    }
+
+  }
+
+
+
+}
+
+[for] {
+  margin-block-end: 10px;
+  font-family: "SofiaProSemiBold", sans-serif;
+  font-size: 14px;
+}
+
+
+
+.details {
+  display: flex;
+  gap: 24px;
+  margin-block-end: 30px;
+}
+
+input[id="password"] {
+  width: 100%;
+}
+
+button {
+  width: 100%;
+  margin-block-end: 16px;
+  padding-block-start: 16px;
+  padding-block-end: 16px;
+  color: hsla(0, 0%, 100%, 1);
+  background-color: hsla(174, 62%, 47%, 1);
+  border: 1px solid hsla(174, 62%, 47%, 1);
+  border-radius: 2px;
+  font-family: "SofiaProSemiBold", sans-serif;
+}
+
+
+.activity-level, .pass-word {
+  margin-block-end: 30px;
+}
+
+
+.input::placeholder {
+  font-family: "SofiaProLight", sans-serif;
+  font-size: 14px;
+  color: hsla(0, 0%, 45%, 1);
+
+
+}
+
+.sign-up p:last-of-type {
+  font-family: 'SofiaProMedium';
+  font-size: 14px;
+}
+
+span a {
+  color: hsla(174, 62%, 47%, 1);
+}
+
+
+input[id="gender"] {
+  position: relative;
+}
+
+.activity-level select {
+  width: 100%;
+} 
+
+.small-screen {
+  display: none;
+}
+
+
+
+/* Small Screen styles */
+
+@media screen and (max-width: 400px) {
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.header {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+
+  >h2 {
+    font-size: 23px;
+    width: 327;
+  }
+
+
+  >div {
+    max-width: 38.68px;
+    margin-left: 16px;
+  }
+}
+
+
+
+.label {
+  width: 295px;
+
+
+  >input {
+    width: 100%;
+  }
+}
+
+
+.sign-up {
+  max-width: 327px;
+  margin-block-start: 20px;
+  padding-block-start: 24px;
+  padding-block-end: 30px;
+  padding-inline: 16px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  margin-block-end: 24px;
+}
+
+
+.activity-level {
+  margin-block-end: 18px;
+}
+
+.small-screen {
+  display: block;
+  width: 80%;
+}
+
+.big-screen {
+  display: none;
+}
+
+
+}
+
